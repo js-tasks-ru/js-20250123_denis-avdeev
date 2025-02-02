@@ -7,7 +7,7 @@
 export const pick = (obj, ...fields) => {
   const newObj = {};
   fields.forEach(key => {
-    if (key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
       newObj[key] = obj[key];
     }
   });

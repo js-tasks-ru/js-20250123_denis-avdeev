@@ -7,7 +7,7 @@
 export const omit = (obj, ...fields) => {
   const oldKeyValues = Object.entries(obj);
   const tempMap = new Map(oldKeyValues);
-  for (let key of fields) {
+  for (const key of fields) {
     tempMap.delete(key);
   }
   return Object.fromEntries(tempMap);
